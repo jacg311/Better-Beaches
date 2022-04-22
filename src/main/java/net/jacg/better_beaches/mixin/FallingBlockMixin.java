@@ -18,5 +18,9 @@ import java.util.Random;
 @Debug(export = true)
 @Mixin(FallingBlock.class)
 public abstract class FallingBlockMixin extends BlockMixin implements LandingBlock {
+    public FallingBlockMixin(Settings settings) {
+        super(settings);
+    }
+
     @Shadow protected abstract void configureFallingBlockEntity(FallingBlockEntity entity);
 }

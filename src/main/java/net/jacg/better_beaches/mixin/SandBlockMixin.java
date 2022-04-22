@@ -32,6 +32,10 @@ public abstract class SandBlockMixin extends FallingBlockMixin implements Waterl
     private static final IntProperty LAYERS = Properties.LAYERS;
     private static final VoxelShape[] LAYER_SHAPES = new VoxelShape[]{VoxelShapes.empty(), shape(2.0), shape(4.0), shape(6.0), shape(8.0), shape(10.0), shape(12.0), shape(14.0), shape(16.0)};
 
+    public SandBlockMixin(Settings settings) {
+        super(settings);
+    }
+
     @Override
     protected void addStates(AbstractBlock.Settings settings, CallbackInfo ci) {
         this.setDefaultState(this.stateManager.getDefaultState().with(LAYERS, 8).with(Properties.WATERLOGGED, false));

@@ -4,7 +4,6 @@
   "package": "net.jacg.better_beaches.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AbstractBlockMixin",
     "BlockMixin",
     "BlocksMixin",
     "FallingBlockMixin",

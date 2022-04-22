@@ -16,7 +16,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Block.class)
-public abstract class BlockMixin extends AbstractBlockMixin {
+public abstract class BlockMixin extends AbstractBlock {
+    public BlockMixin(Settings settings) {
+        super(settings);
+    }
+
     @Shadow protected abstract void setDefaultState(BlockState state);
     @Shadow protected abstract void appendProperties(StateManager.Builder<Block, BlockState> builder);
 
