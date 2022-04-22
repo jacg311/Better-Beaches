@@ -1,0 +1,6 @@
+{   "parent": "block/snow_height10",
+  "textures": {
+    "particle": "block/sand",
+    "texture": "block/sand"
+  }
+}
